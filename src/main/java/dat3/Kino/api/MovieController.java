@@ -13,7 +13,7 @@ import org.springframework.http.ResponseEntity;
 import java.util.List;
 import java.util.Optional;
 
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
+
 
 @RestController
 @RequestMapping("/movies")
@@ -46,11 +46,12 @@ public class MovieController {
     }
 
 
-    @PostMapping("/")
+    @PostMapping("/movies")
     public ResponseEntity<MovieDTO> createMovie(@RequestBody MovieDTO movieDTO) {
         MovieDTO createdMovie = movieService.createMovie(movieDTO);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdMovie);
     }
+
 
     @PutMapping("/{id}")
     public ResponseEntity<MovieDTO> updateMovie(@PathVariable int id, @RequestBody MovieDTO movieDTO) {

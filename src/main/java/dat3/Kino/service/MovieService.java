@@ -31,23 +31,16 @@ public class MovieService {
         return movieRepository.save(movieDTO);
     }
 
-    public MovieDTO createMovie(MovieDTO movieDTO) {
 
-        return movieRepository.save(movieDTO);
+    public MovieDTO createMovie(MovieDTO movieDTO) {
+        MovieDTO savedMovie = movieRepository.save(movieDTO);
+        return savedMovie;
     }
 
-
-
-    // Method to generate a unique integer ID
     private int generateUniqueId() {
 
         int lastAssignedId = 0; // Initialize with some default value or retrieve from storage
-
-
         lastAssignedId++;
-
-
-
         return lastAssignedId;
     }
 
