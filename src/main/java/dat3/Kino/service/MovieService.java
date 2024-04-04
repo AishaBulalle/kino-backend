@@ -27,21 +27,9 @@ public class MovieService {
         return movieRepository.findById(id);
     }
 
-    public MovieDTO saveMovie(MovieDTO movieDTO) {
-        return movieRepository.save(movieDTO);
-    }
-
-
     public MovieDTO createMovie(MovieDTO movieDTO) {
         MovieDTO savedMovie = movieRepository.save(movieDTO);
         return savedMovie;
-    }
-
-    private int generateUniqueId() {
-
-        int lastAssignedId = 0; // Initialize with some default value or retrieve from storage
-        lastAssignedId++;
-        return lastAssignedId;
     }
 
 

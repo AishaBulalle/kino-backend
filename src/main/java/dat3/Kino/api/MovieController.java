@@ -46,11 +46,12 @@ public class MovieController {
     }
 
 
-    @PostMapping("/movies")
+    @PostMapping("/")
     public ResponseEntity<MovieDTO> createMovie(@RequestBody MovieDTO movieDTO) {
         MovieDTO createdMovie = movieService.createMovie(movieDTO);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdMovie);
     }
+
 
 
     @PutMapping("/{id}")
