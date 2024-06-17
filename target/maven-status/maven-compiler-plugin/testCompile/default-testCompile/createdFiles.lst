@@ -1,0 +1,6 @@
+dat3/security/api/AuthorizationTest.class
+dat3/ApplicationTests.class
+dat3/security/service/UserWithRolesServiceTest.class
+dat3/security/api/AuthenticationTest.class
+dat3/security/TestUtils.class
+dat3/security/api/UserWithRoleControllerTest.class

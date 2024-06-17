@@ -11,10 +11,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/bookings")
 public class BookingController {
-    private final BookingService bookingService;
+    private BookingService bookingService;
 
     @Autowired
-    public BookingController(BookingService bookingService) {
+    public void BookingController(BookingService bookingService) {
         this.bookingService = bookingService;
     }
 
